@@ -15,6 +15,8 @@ namespace Osis.Models.ViewModels
         public string LastUserLoggedOn { get; set; }
         public string LastLoggedOnFromIP { get; set; }
         public DateTime LastLoggedOn { get; set; }
-
+        public double CurrentBalance { get; set; }
+        public double CurrentBalanceDue { get; set; }
+        public int UpcomingJobs { get; set; }
     }
 }
