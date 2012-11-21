@@ -2,6 +2,10 @@ using System;
 
 namespace Osis.Models.ViewModels
 {
+
+    /// <summary>
+    /// Display class for information to the dashboard.
+    /// </summary>
     public class DashboardDisplayViewModel
     {
         public string CompanyName { get; set; }
