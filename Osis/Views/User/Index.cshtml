@@ -1,0 +1,17 @@
+﻿@model Osis.Models.User
+
+@{
+    ViewBag.Title = "User";
+    //Layout = "_Layout";
+}
+
+<h2>Please edit the user page:</h2>
+
+@{ Html.BeginForm(); }
+
+@Html.EditorForModel()
+
+<button type="submit"></button>
+@{
+    Html.EndForm();
+}
