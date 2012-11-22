@@ -1,0 +1,32 @@
+﻿@model Osis.Domain.Security.RegisterExternalLoginModel
+
+@{
+    ViewBag.Title = "Login";
+    ViewBag.Section = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="row">
+        <div class="span12" style="height: 30px"> </div>
+    </div>
+    
+    <div class="row">
+        <div class="span4 offset2" align="right">Username: <input type="password" name="username"/></div>
+    </div>
+
+    <div class="row">
+        <div class="span4 offset2" align="right">Password: <input type="password" name="password"/></div>
+    </div>
+    
+    <div class="row">
+        <div class="span4 offset2" align="right">Confirm Password: <input type="password" name="confirmpassword"/></div>
+    </div>
+    
+    <div class="row">
+        <div class="span4 offset2" align="right"><input type="submit" name="Logon" value="Logon" class="btn btn-primary"/></div>
+    </div>
+}

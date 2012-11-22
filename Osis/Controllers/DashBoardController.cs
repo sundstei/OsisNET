@@ -27,7 +27,11 @@ namespace Osis.Controllers
 
         private void GetLogonInformation(DashboardDisplayViewModel model)
         {
-            var logonSummary = _logonInfoService.GetLogonSummary();
+            var userName = this.User.Identity.Name;
+            var logonSummary = _logonInfoService.GetLogonSummary(userName);
+
+
+
             AutoMapper.Mapper.Map(logonSummary, model); // Map LogonSummary to the ViewModel
         }
     }

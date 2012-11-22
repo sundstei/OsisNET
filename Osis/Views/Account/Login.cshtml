@@ -1,0 +1,28 @@
+﻿@model Osis.Domain.Security.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+    ViewBag.Section = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="row">
+        <div class="span12" style="height: 30px"> </div>
+    </div>
+    
+    <div class="row">
+        <div class="span4 offset2" align="right">Username:  @Html.EditorFor(model => model.UserName)</div>
+    </div>
+
+    <div class="row">
+        <div class="span4 offset2" align="right">Password: @Html.EditorFor(model => model.Password)</div>
+    </div>
+
+    <div class="row">
+        <div class="span4 offset2" align="right"><input type="submit" name="Logon" value="Logon" class="btn btn-primary"/></div>
+    </div>
+}

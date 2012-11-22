@@ -1,9 +1,10 @@
 ﻿using System.Data.Entity;
+using Osis.Domain.Security;
 using Osis.Models;
 
 namespace Osis
 {
-    public class OsisContext : DbContext
+    public class DatabaseContext : DbContext
     {
         public IDbSet<Person> Persons { get; set; }
         public IDbSet<User> Users { get; set; }
@@ -11,5 +12,7 @@ namespace Osis
         public IDbSet<Company> Companies { get; set; }
         public IDbSet<Job> Jobs { get; set; }
         public IDbSet<Photo> Photos { get; set; }
+
+        public IDbSet<UserProfile> UserProfiles { get; set; }
     }
 }

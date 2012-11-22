@@ -4,6 +4,6 @@ namespace Osis.Services
 {
     public interface ILogonInfoService
     {
-        LogonSummary GetLogonSummary();
+        LogonSummary GetLogonSummary(string userName);
     }
 }

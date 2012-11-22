@@ -2,14 +2,14 @@ namespace Osis.Migrations
 {
     using System.Data.Entity.Migrations;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Osis.OsisContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Osis.DatabaseContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(Osis.OsisContext context)
+        protected override void Seed(Osis.DatabaseContext context)
         {
             //  This method will be called after migrating to the latest version.
 
